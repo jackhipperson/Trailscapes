@@ -1,0 +1,14 @@
+{
+  "name": "trailscapes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "scss:compile": "node-sass sass/styles.scss css/styles.css -w"
+  },
+  "author": "Jack Hipperson",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^9.0.0"
+  }
+}
