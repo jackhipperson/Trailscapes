@@ -5,7 +5,9 @@
         width: 55%;
         position: absolute;
         box-shadow: 0 2rem 4rem rgba($color-black, .2);
-        border-radius: 2px;
+        outline-offset: 1.5rem;
+        z-index: 10;
+        transition: all .3s;    
 
         &--p1 {
             left: 0;
@@ -22,5 +24,15 @@
             top: 10rem;
         }
 
+        &:hover {
+            transform: scale(1.05) translateY(-.5rem);
+            box-shadow: 0 2.5rem 4rem rgba($color-black, .2);
+            z-index: 20;
+            outline: 1.2rem solid $color-light-green;
+        }
+    }
+
+    &:hover &__photo:not(:hover) {
+        transform: scale(.95);
     }
 }
