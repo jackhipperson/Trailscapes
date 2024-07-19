@@ -27,7 +27,16 @@
         color: $color-grey;
 
         &::after {
-            background: #fff;
+            background: $color-white;
+        }
+    }
+
+    &--green {
+        background: $color-medium-green;
+        color: $color-white;
+
+        &::after {
+            background: $color-medium-green;
         }
     }
 
