@@ -50,6 +50,6 @@
 
     &:hover &__img {
         transform: scale(1.2);
-        filter: blur(3px);
+        filter: blur(3px) brightness(80%);
     }
 }
