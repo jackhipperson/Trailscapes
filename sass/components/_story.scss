@@ -12,12 +12,12 @@
         float: left;
         width: 15rem;
         height: 15rem;
-        background-color: orangered;
         --webkit-shape-outside: circle(50% at 50% 50%);
         shape-outside: circle(50% at 50% 50%);
         --webkit-clip-path: circle(50% at 50% 50%);
         clip-path: circle(50% at 50% 50%);
         transform: translateX(-1.5rem) skewX(13deg);
+        position: relative;
 
     }
 
@@ -27,5 +27,29 @@
 
     &__img {
         height: 100%;
+        transform: scale(1);
+    }
+
+    &__caption {
+        color: $color-white;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 20%);
+        text-align: center;
+        font-size: 1.8rem;
+        opacity: 0;
+        transition: all .5s;
+        backface-visibility: hidden;
+    }
+
+    &:hover &__caption {
+        transform: translate(-50%, -50%);
+        opacity: 1;
+    }
+
+    &:hover &__img {
+        transform: scale(1.2);
+        filter: blur(3px);
     }
 }
