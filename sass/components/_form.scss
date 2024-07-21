@@ -1,0 +1,48 @@
+.form {
+
+    &__group {
+        &:not(:last-child) {
+            margin-bottom: 2rem;
+        }
+    }
+
+    &__label {
+        font-size: 1.5rem;
+        font-weight: 700;
+        display: block;
+        margin-top: .7rem;
+        margin-left: 2rem;
+        transition: all .3s ease;
+
+    }
+
+    &__input {
+        display: block;
+        font-family: inherit;
+        font-size: 1.5rem;
+        font-weight: 700;
+        width: 45%;
+        padding: 1.5rem 2rem;
+        border: none;
+        border-bottom: solid 3px transparent;
+        border-radius: 2px;
+
+        &:focus {
+            outline: none;
+            border: none;
+            border-bottom: solid 3px $color-medium-green;
+            box-shadow: 0 2px 4px rgba($color-black,.5);
+        }
+
+        &:focus:invalid {
+            border-bottom: solid 3px $color-dark-red;
+        }
+    }
+
+    &__input:placeholder-shown + &__label {
+        transform: translateY(-4rem);
+        opacity: 0;
+        visibility: hidden;
+    }
+
+}
