@@ -15,6 +15,38 @@
     <title>Trailscapes | Adventure awaits in every exploration</title>
   </head>
   <body>
+    <div class="navigation">
+      <input type="checkbox" class="navigation__toggle" id="nav-toggle" />
+      <label for="nav-toggle" class="navigation__button">
+        <span class="navigation__icon">&nbsp;</span>
+      </label>
+      <div class="navigation__background">&nbsp;</div>
+      <nav class="navigation__nav">
+        <ul class="navigation__list">
+          <li class="navigation__item">
+            <a class="navigation__link" href="#"
+              ><span>01</span>About Trailscape</a
+            >
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link" href="#"
+              ><span>02</span>Your Benefits</a
+            >
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link" href="#"
+              ><span>03</span>Popular Tours</a
+            >
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link" href="#"><span>04</span>Stories</a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link" href="#"><span>05</span>Book Now</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
     <header class="header">
       <div class="header__logo-box">
         <img src="./img/logo-white.png" alt="Logo" class="header__logo" />
@@ -287,7 +319,7 @@
               <div class="u-margin-bottom-medium">
                 <h2 class="heading-secondary">Start Booking Now!</h2>
               </div>
-              <form action="#" class="form">
+              <form action="#" class="form__form">
                 <div class="form__group">
                   <input
                     type="text"
@@ -308,12 +340,83 @@
                   />
                   <label for="email" class="form__label">Email Address</label>
                 </div>
+                <div class="form__group">
+                  <div class="form__radio-group">
+                    <input
+                      type="radio"
+                      class="form__radio-input"
+                      id="small"
+                      name="size"
+                    />
+                    <label for="small" class="form__radio-label"
+                      >Book for small group (1-5)
+                      <span class="form__radio-button"></span>
+                    </label>
+                  </div>
+
+                  <div class="form__radio-group">
+                    <input
+                      type="radio"
+                      class="form__radio-input"
+                      id="large"
+                      name="size"
+                    />
+                    <label for="large" class="form__radio-label"
+                      >Book for large group (6+)
+                      <span class="form__radio-button"></span
+                    ></label>
+                  </div>
+                </div>
+                <div class="form__group">
+                  <button class="btn btn--green u-margin-top-small">
+                    Next Step &rarr;
+                  </button>
+                </div>
               </form>
             </div>
           </div>
         </div>
       </section>
     </main>
+    <footer class="footer">
+      <div class="footer__logo-div u-margin-bottom-large">
+        <img src="./img/logo-white.png" alt="Logo" class="footer__logo" />
+        <h4 class="footer__logo-text">Trailscapes</h4>
+      </div>
+      <div class="row">
+        <div class="col-1-of-2">
+          <ul class="footer__list">
+            <li class="footer__item">
+              <a href="#" class="footer__link">Company</a>
+            </li>
+            <li class="footer__item">
+              <a href="#" class="footer__link">Contact Us</a>
+            </li>
+            <li class="footer__item">
+              <a href="#" class="footer__link">Privacy Policy</a>
+            </li>
+            <li class="footer__item">
+              <a href="#" class="footer__link">Careers</a>
+            </li>
+            <li class="footer__item">
+              <a href="#" class="footer__link">Terms</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-1-of-2">
+          <p class="footer__copywrite">
+            Built by
+            <a class="footer__link" href="https://github.com/jackhipperson"
+              >Jack Hipperson</a
+            >
+            during a Jonas Schmedtmann course Advanced CSS and SASS. This design
+            is credited to Jonas.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <div class="popup"><div class="popup__content">POPUP</div></div>
 
     <!--     
     <section class="grid-test">
