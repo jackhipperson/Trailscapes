@@ -7,6 +7,10 @@
         margin-bottom: $gutter-vertical;
     }
 
+    @include respond(tablet-p) {
+        max-width: 50rem;
+    }
+
     @include clearfix;
 
     [class^="col-"] {
@@ -15,6 +19,15 @@
 
         &:not(:last-child) {
             margin-right: $gutter-horizontal;
+
+            @include respond(tablet-p) {
+                margin-right: 0;
+                margin-bottom: $gutter-horizontal;
+            }
+        }
+
+        @include respond(tablet-p) {
+            width: 100% !important;
         }
     }
 

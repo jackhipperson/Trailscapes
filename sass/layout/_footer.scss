@@ -23,6 +23,11 @@
         border-top: solid 1px $color-white;
         padding-top: 5rem;
         display: inline-block;
+
+        @include respond(tablet-p) {
+            width: 100%;
+            text-align: center;
+        }
     }
 
     &__item {
@@ -37,6 +42,7 @@
             padding: 0 .4rem;
             transition: all .2s;
             display: inline-block;
+
         }
 
         &:hover, &:active {
@@ -52,5 +58,10 @@
         padding-top: 5rem;
         width: 85%;
         float: right;
+
+        @include respond(tablet-p) {
+            width: 100%;
+            text-align: center;
+        }
     }
 }

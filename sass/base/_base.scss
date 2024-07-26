@@ -8,8 +8,31 @@
 
 html {
     font-size: 62.5%;
+
+    @include respond(laptop-l) {
+        font-size: 70%;
+    }
+
+    @include respond(tablet-l) {
+        font-size: 57.5%;
+    }
+
+    @include respond(tablet-p) {
+        font-size: 55%;
+    }
+
+    @include respond(phone) {
+        font-size: 55%;
+    }
+
+
 }
 
 body {
     box-sizing: border-box;
+    padding: 3rem;
+
+    @include respond(tablet-p) {
+        padding: 0;
+    }
 }

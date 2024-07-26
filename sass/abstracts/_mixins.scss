@@ -5,3 +5,38 @@
         clear: both;
     }
 }
+
+@mixin positionAbsCenter {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/*
+
+MEDIA QUERIES
+
+phone = 0-600px
+tablet-p = 600-900px
+tablet-l = 900-1200px
+[in between is normal view styling - desktop first design]
+laptop-l = 1800px+
+*/
+
+@mixin respond($breakpoint) {
+
+    @if $breakpoint == phone {
+        @media (max-width: 37.5em) {@content} // 600px/16px = 37.5em
+    }
+    @if $breakpoint == tablet-p {
+        @media (max-width: 56.25em) {@content}
+    }
+    @if $breakpoint == tablet-l {
+        @media (max-width: 75em) {@content}
+    }
+    @if $breakpoint == laptop-l {
+        @media (min-width: 112.5em) {@content}
+    }
+
+}
