@@ -4,6 +4,10 @@
 
 .u-margin-bottom-large {
     margin-bottom: 8rem;
+
+    @include respond(tablet-p) {
+        margin-bottom: 4rem;
+    }
 }
 
 .u-margin-bottom-medium {
