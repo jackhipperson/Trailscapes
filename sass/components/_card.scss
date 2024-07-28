@@ -141,12 +141,14 @@
 
     @include respond(tablet-p) {
         height: 100%;
+        box-shadow: 0 4px 8px rgba($color-black, .2);
 
         &__side {
             position: relative;
             top: auto;
             left: auto;
             height: 100%;
+            box-shadow: 0 0 0 rgba($color-black, .2);
 
             &--front {
                 background-color: $color-white;
@@ -154,6 +156,7 @@
 
             &--back {
                 transform: rotateY(0);
+                clip-path: polygon(0 15%, 0 100%, 100% 100%, 100% 0);
             }
         }
 
@@ -213,7 +216,8 @@
         }
 
         &__details {
-            padding: 3rem;
+            padding: 3.5rem;
+            margin-bottom: -4rem;
 
             ul {
                 list-style: none;
@@ -239,7 +243,7 @@
             top: auto;
             left: auto;
             transform: translate(0,0);
-            padding: 3rem;
+            padding: 4rem;
             text-align: center;
             width: auto;
 

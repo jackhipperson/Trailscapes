@@ -309,16 +309,19 @@ body {
       margin-bottom: 8rem; }
   @media (max-width: 56.25em) {
     .card {
-      height: 100%; }
+      height: 100%;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); }
       .card__side {
         position: relative;
         top: auto;
         left: auto;
-        height: 100%; }
+        height: 100%;
+        box-shadow: 0 0 0 rgba(0, 0, 0, 0.2); }
         .card__side--front {
           background-color: #FFF; }
         .card__side--back {
-          transform: rotateY(0); }
+          transform: rotateY(0);
+          clip-path: polygon(0 15%, 0 100%, 100% 100%, 100% 0); }
       .card:hover .card__side--front {
         transform: rotateY(0); }
       .card__picture {
@@ -353,7 +356,8 @@ body {
         .card__heading-span-3 {
           background-color: rgba(231, 56, 39, 0.85); }
       .card__details {
-        padding: 3rem; }
+        padding: 3.5rem;
+        margin-bottom: -4rem; }
         .card__details ul {
           list-style: none;
           width: 80%;
@@ -369,7 +373,7 @@ body {
         top: auto;
         left: auto;
         transform: translate(0, 0);
-        padding: 3rem;
+        padding: 4rem;
         text-align: center;
         width: auto; }
         .card__cta-price-box {
@@ -519,6 +523,14 @@ body {
   padding: 6rem 6rem;
   font-size: 1.6rem;
   transform: skewX(-13deg); }
+  @media (max-width: 75em) {
+    .story {
+      width: 90%; } }
+  @media (max-width: 56.25em) {
+    .story {
+      width: 100%;
+      padding: 3rem 3rem;
+      transform: skewX(0deg); } }
   .story__shape {
     float: left;
     width: 15rem;
@@ -529,8 +541,14 @@ body {
     clip-path: circle(50% at 50% 50%);
     transform: translateX(-1.5rem) skewX(13deg);
     position: relative; }
+    @media (max-width: 56.25em) {
+      .story__shape {
+        transform: translateX(-1.5rem) skewX(0deg); } }
   .story__text {
     transform: skewX(13deg); }
+    @media (max-width: 56.25em) {
+      .story__text {
+        transform: skewX(0deg); } }
   .story__img {
     height: 100%;
     transform: scale(1); }
@@ -856,7 +874,7 @@ body {
   margin-top: -10vh; }
   @media (max-width: 56.25em) {
     .section-tours {
-      padding: 15rem 0; } }
+      padding: 15rem 0 5rem; } }
 
 .section-stories {
   padding: 10rem 0;
