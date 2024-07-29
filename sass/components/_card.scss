@@ -13,8 +13,11 @@
         height: 48rem;
         transition: all 1s ease;
         width: 100%;
+        -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
         box-shadow: 0 4px 8px rgba($color-black, .2);
+
+
 
         &--front {
             background-color: $color-white;
@@ -139,20 +142,19 @@
         }
     }
 
-    @include respond(tablet-p) {
-        height: 100%;
+    // @include respond(tablet-p) {
+
+    @media only screen and (max-width: 56.25em),
+    only screen and (hover: none) {
+
+        height: auto;
         box-shadow: 0 4px 8px rgba($color-black, .2);
+        border-radius: 3px;
 
         &__side {
             position: relative;
-            top: auto;
-            left: auto;
-            height: 100%;
-            box-shadow: 0 0 0 rgba($color-black, .2);
-
-            &--front {
-                background-color: $color-white;
-            }
+            height: auto;
+            box-shadow: none;
 
             &--back {
                 transform: rotateY(0);
@@ -164,80 +166,11 @@
             transform: rotateY(0);
         }
 
-        // FRONT SIDE STYLING
-        &__picture {
-            height: 20rem;
-            background-size: cover;
-            background-blend-mode: color;
-            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-
-            &-1 {
-                background-image: linear-gradient(to right bottom, $color-light-blue, $color-dark-blue), url('../img/tour-1.jpg');
-            }
-
-            &-2 {
-                background-image: linear-gradient(to right bottom, $color-light-green, $color-dark-green), url('../img/tour-2.jpg');
-            }
-
-            &-3 {
-                background-image: linear-gradient(to right bottom, $color-light-red, $color-dark-red), url('../img/tour-3.jpg');
-            }
-        }
-
-        &__heading {
-            width: 65%;
-            color: $color-white;
-            text-transform: uppercase;
-            font-size: 2.8rem;
-            font-weight: 300;
-            text-align: right;
-            position: absolute;
-            top: 11.5rem;
-            right: 2rem;
-        }
-
-        &__heading-span {
-            padding: .5rem 1rem;
-            -webkit-box-decoration-break: clone;
-            box-decoration-break: clone;
-
-            &-1 {
-                background-color: rgba($color-dark-blue, .85);
-            }
-
-            &-2 {
-                background-color: rgba($color-dark-green, .85);
-            }
-
-            &-3 {
-                background-color: rgba($color-dark-red, .85);
-            }
-
-        }
-
         &__details {
-            padding: 3.5rem;
-            margin-bottom: -4rem;
-
-            ul {
-                list-style: none;
-                width: 80%;
-                margin: 0 auto;
-
-                li {
-                    text-align: center;
-                    font-size: 1.5rem;
-                    padding: 1rem;
-
-                    &:not(:last-child) {
-                        border-bottom: solid 1px $color-medium-grey;
-                    }
-
-                }
-            }
+            padding: 4rem;
+            margin-bottom: -4.5rem;
         }
 
-        // BACK SIDE STYLING
         &__cta {
             position: relative;
             top: auto;

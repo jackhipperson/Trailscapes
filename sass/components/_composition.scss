@@ -11,7 +11,7 @@
 
         @include respond(tablet-p) {
             position: relative;
-            width: 33.33%;
+            width: 30%;
             box-shadow: 0 2rem 4rem rgba($color-black, .5);
         }
 
@@ -44,7 +44,7 @@
 
             @include respond(tablet-p) {
                 top:1rem;
-                left: -2rem;
+                left: -3rem;
                 transform: scale(1.1);
             }
         }
